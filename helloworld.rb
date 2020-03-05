@@ -32,5 +32,11 @@ end
 # end
 
 get '/company/*' do
-  "This route catches everything else."
+  subject = params[:splat].first
+  "Splat is: #{subject}."
+end
+
+# preferred way
+get '/products/:id' do
+  "Product ID is: #{params[:id]}"
 end
